@@ -37,12 +37,23 @@
 
 
     </script>
+    <script>
+        function cb(response) {
+            document.getElementById('visits').innerText = response.value;
+        }
+    </script>
+    <script async src="https://api.countapi.xyz/hit/canisee.xyz/verify?callback=cb"></script>
 </head>
 
 <body>
     <div class="content" id="index">
         <div class="main-answer">
             <p class="title"><a class="what-is-this" href="#log">yes</a></p>
+        </div>
+        <div>
+            <p>
+                <span id="visits">...</span> verifications till date.
+            </p>
         </div>
     </div>
     <div class="content" id="log">
